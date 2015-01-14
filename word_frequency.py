@@ -1,13 +1,13 @@
-file = open("sample.txt")
+#file = open("sample.txt")
+with open('sample.txt') as f:
+    file = str(f)
+
 import re
 import operator
 
 
-def count_words():
+def count_words(file):
     """This will count the words and print in a (word, count) format."""
-
-
-
     words = {}
     file = file.lower()
     file = file.split()
@@ -24,4 +24,4 @@ def count_words():
 
 
 
-count_words()
+count_words(file)
